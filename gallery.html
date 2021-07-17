@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header id="top">
+      <div class="container">
+        <div class="socail-media">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div>
+      
+    
+    <div class="contact-info">
+      <i class="fa fa-phone">
+        +995 555 555 555
+      </i>
+      <i class ="fa fa-phone">
+        Revishvilitazo@gmail.com
+      </i>
+    </div>
+    </div>
+    </header>
+
+    <nav id="navbar">
+      <div class="container">
+        <img src="img/white.png" class="logo" alt="">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="trainer.html">Trainer</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+                    <!-- G A L L E R Y -->
+
+<div class="main">
+
+<h1>Our Experienced Coach</h1>
+<hr>
+
+<h2></h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Fitness Coach</button>
+  <button class="btn" onclick="filterSelection('cars')"> Yoga Coach</button>
+  <button class="btn" onclick="filterSelection('people')"> Swimming Coach</button>
+</div>
+
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="img/trainer1.jpg" alt="Mountains" style="width:100%">
+      <h4>James</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="img/trainer2.jpg" alt="Lights" style="width:100%">
+      <h4>Robert</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="img/trainer1.jpg" alt="Nature" style="width:100%">
+      <h4>James</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="img/yoga1.jpg" alt="Car" style="width:100%">
+      <h4>Olivia</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="img/yoga2.jpg" alt="Car" style="width:100%">
+      <h4>Emma</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="img/yoga1.jpg" alt="Car" style="width:100%">
+      <h4>Olivia</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="img/swim1.jpg" alt="Car" style="width:100%">
+      <h4>Michael</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="img/swim2.jpg" alt="Car" style="width:100%">
+      <h4>David</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="img/swim1.jpg" alt="Car" style="width:100%">
+      <h4>Michael</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+</body>
+</html>
